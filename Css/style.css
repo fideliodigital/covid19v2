@@ -1,0 +1,577 @@
+body
+{
+
+  font-family: 'Open Sans', sans-serif;
+  text-align: justify;
+}
+
+/* -------------- Header  --------------  */
+
+/* Borrar el título que genera RMarkdown */
+h1.title.toc-ignore {
+    display: none;
+}
+
+header #encabezado
+{
+  /* background-image: url("../Imagenes/background-removebg-preview.png"); */
+  background-image: url("../Imagenes/backgroundVerdeEdit-removebg-preview.png");
+  background-image: url("../Imagenes/backgroundVerdeBlanco.png");
+  background-size: cover;
+  height: 400px;
+  color: white;
+  margin-bottom: 30px;
+  display: block;
+  background-position-x: center;
+}
+
+
+
+#encabezado .logos
+{
+  margin-top: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid white;
+}
+#encabezado .logos img
+{
+  margin-right: 30px;
+  /* height: 20px;; */
+}
+#encabezado .logos a
+{
+  /* display: inline; */
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  float: right;
+  line-height: 45px;
+  /* right: 5px; */
+}
+
+#encabezado p
+{
+  font-size: 17px;
+}
+.botonMas
+{
+  margin-left: calc(50% - 85px);
+}
+
+.botonMas button
+{
+  font-weight: bold;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  color: #a8c32f;
+  background-color: white;
+  border: none;
+  padding: 7px;
+}
+
+#encabezado h1
+{
+  text-align: left;
+}
+
+/* evita que se pongan los 3 puntos verdes en el header */
+header h1:after 
+{
+  content: "";
+}
+
+
+
+#htmlwidget-b0787fd714e60e5b0598
+{
+  display: none;
+}
+
+/* Borra las opciones de plotly */
+div.modebar {
+  display: none;
+}
+
+/* Texto específico para desktop*/
+div#texto_desktop {
+    display: block;
+    text-align: center;
+}
+div#texto_mobile {
+    display: none;
+}
+
+.ocultarEnMovil
+{
+	display: block;
+}
+.ocultarEnDesktop
+{
+	display: none;
+}
+
+
+@media only screen and (max-width: 768px)
+{
+	.ocultarEnMovil
+	{
+		display: none;
+	}
+	.ocultarEnDesktop
+	{
+		display: block;
+	}
+  .section.level1, body #encabezado .container-fluid 
+  {
+    padding: 0 15px;
+  }
+  .logos img:nth-child(2n) {
+    float: right;
+    margin-top: 9px;
+  }
+
+  #encabezado .logos
+  {
+    margin-bottom: 95px;
+  }
+    
+  #encabezado .logos a {
+    color: white;
+    font-size: 19px;
+    font-weight: bold;
+    display: block;
+    margin-top: 31px;
+    position: absolute;
+    left: calc(50% - 115px);
+    
+  }
+
+    header #encabezado {
+      
+      background-image: none;
+      height: auto;
+    }
+
+    header .container-fluid.main-container {
+      /* background-image: url(../Imagenes/background-removebg-preview.png); */
+  background-image: url("../Imagenes/backgroundVerdeBlanco.png");
+
+      background-repeat: no-repeat;
+      height: auto;
+      background-size: 100% 162px;
+      background-position-x: center;
+      color: #94969b;
+    }
+
+    h1.title.toc-ignore {
+      color: #1d57a9;
+      font-size: 21px;
+      
+    font-weight: bold;
+  }
+    .date {
+      display: none;
+  }
+  
+  .botonMas 
+   {
+    margin-left: calc(50% - 85px);
+  }
+
+  .botonMas button
+  {
+    border: 1px solid #a8c32f;
+  }
+
+  /* Texto específico para mobile*/
+  div#texto_desktop {
+      display: none;
+  }
+  div#texto_mobile {
+      display: block;
+  }
+}
+
+/* -------------- SECCIONES  --------------  */
+
+#overview li
+{
+  color: #94969b;
+}
+
+#países
+{
+  /* muesca en la parte superior */
+  background-image: radial-gradient(22% 52px at 50% -30px, #FFF 98%, transparent 100%);
+}
+
+/* configura los bullets con colores */
+#países ul 
+{
+  list-style: none;
+}
+#países li::before 
+{
+  content: "......";
+  background-color: #6CA5D2;
+  color: transparent;
+  margin-right: 12px;
+  border-radius: 9px;
+  width: 20px;
+  font-size: 16px;
+}
+#países li:nth-child(2n)::before 
+{
+  background-color: #35B0B9;
+}
+#países li:nth-child(3n)::before 
+{
+  background-color: #35B0B9;
+}
+
+/* Formato Tablas titulos */
+.dataTables_scrollHead th.sorting {
+  background-color: #174C9A;
+  color: white;
+  text-align: center !important;
+}
+
+.dataTables_scrollHead th.sorting:nth-child(2n) {
+  background-color: #01A3A5;
+}
+
+.dataTables_scrollHead th.sorting:nth-child(3n) {
+  background-color: #B6C536;
+}
+.dataTables_scrollHead th.sorting:nth-child(4n) {
+  background-color: #026988;
+}
+/* formato tablas info */
+.dataTables_scrollBody td.dt-right
+{
+  text-align: center !important;
+}
+.dataTables_scrollBody td.dt-right:nth-child(2n)
+{
+  color:  #01A3A5;
+  text-align: center;
+}
+.dataTables_scrollBody td.dt-right:nth-child(3n)
+{
+  color:  #B6C536;
+}
+.dataTables_scrollBody td.dt-right:nth-child(4n)
+{
+  color:  #026988;
+}
+/* otros ajustes de las tabñas */
+
+th.dt-right.sorting_asc {
+  text-align: center !important;
+}
+
+table {
+  border-collapse: collapse;
+  border-style: hidden;
+}
+
+.dataTables_scrollBody  td, .dataTables_scrollBody  th ,.dataTables_wrapper.no-footer .dataTables_scrollBody 
+ {
+  border: 1px solid #94969b75 !important;
+}
+
+body tr.odd {
+  background-color: #EFEFEF !important;
+  color: #94969b;
+}
+.datatables {
+  /* margin-bottom: 40px;
+  margin-top: 40px; */
+}
+
+
+/* -------------- Generales  --------------  */
+
+body
+{
+  font-family: 'Open Sans';
+}
+h1
+{
+  text-align: center;
+}
+.section h1
+{
+  color: #a8c32f;  
+}
+
+
+#países, #países h1
+{
+  color: white;  
+}
+
+
+#países
+{
+  background-color: #1d57a9;  
+}
+
+
+h3, h2
+{
+  text-align: center;
+}
+.section h1
+{
+  position: relative;
+
+  margin-bottom: 45px;
+}
+
+#países li, #overview li
+{
+  font-size: 22px;
+}
+.level2 h2 {
+  margin: 20px 0;
+  font-weight: bold;
+  margin-bottom: 75px;
+}
+.level2 .row {
+  margin-top: 75px;
+  margin-bottom: 60px;
+}
+/* puntos verdes */
+
+h1:after {
+  content: ". . .";
+  height: 10px;
+  background-repeat: no-repeat;
+  width: fit-content;
+  color: #a8c32f;
+  position: absolute;
+  top: 50px;
+  left: calc(50%);
+  font-size: 19px;
+}
+
+
+a.email {
+  color: #a8c32f;
+}
+
+/* --------------Evita que toquemos el html pero modifiquemos el container  --------------  */
+
+body .main-container 
+{
+  max-width: 100%;
+}
+body .container-fluid {
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-right: auto;
+}
+
+.section.level1, body #encabezado .container-fluid{
+  padding: 0 10%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section.level1
+{
+  padding: 40px 10%;
+}
+
+/* --------------Footer  --------------  */
+
+footer
+{
+  /* background-color: #e3e3e8; */
+ background-image: url("../Imagenes/fondoFooter.png"); 
+ height: 300px;;
+ 
+ /* background-image: radial-gradient(40% 52px at 50% -30px, #FFF 98%, transparent 100%); */
+ background-repeat: no-repeat;
+ background-position: center;
+
+ position: relative;
+}
+
+
+footer.about
+{
+ background-image: none; 
+}
+
+footer a
+{
+  display: inline-block;
+  color: black;
+  text-decoration: underline;
+  margin-right: 20px;
+  position: relative;
+}
+.subContenedor
+{
+  /* width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url("../Imagenes/footerIconos.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position-y: center;
+  background-position-x: right; */
+  right: 45px;
+  position: absolute;
+  top: 66px;
+
+}
+
+.contenedorLinks
+{
+  padding: 117px 10%;
+}
+
+@media only screen and (max-width: 768px)
+{
+
+  .subContenedor 
+  {
+    right: -13px;
+    /* left: 10px; */
+    /* padding-left: 10%; */
+    position: absolute;
+    top: 130px;
+    max-width: fit-content;
+  }
+  .contenedorLinks
+  {
+    padding: 85px 0%;
+    text-align: center;
+}
+
+}
+
+
+/* -------------- Predeterminados desde R Markdown  --------------  */
+
+code{white-space: pre;}
+
+pre:not([class]) {
+    background-color: white;
+  }
+
+h1 {
+  font-size: 44px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+
+
+/* <!-- tabsets --> */
+
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+
+.centrar {
+  text-align: center;
+}
+
+h4#con-respecto-al-valor-de-transacciones-procesadas {
+    text-align: center;
+}
